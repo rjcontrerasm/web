@@ -2,689 +2,722 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARPYNET | Soluciones TI confiables para empresas y entidades públicas</title>
-  <meta name="description" content="ARPYNET ofrece soluciones TI confiables para sector público y privado con enfoque en continuidad operativa y crecimiento." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ARPYNET | Soluciones TI para empresas y sector público</title>
+  <meta name="description" content="ARPYNET integra infraestructura, nube, seguridad, comunicaciones y outsourcing TI para empresas privadas e instituciones públicas." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.arpynet.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ARPYNET | Soluciones TI para empresas y sector público" />
+  <meta property="og:description" content="Infraestructura, nube, soporte y seguridad tecnológica para continuidad operativa y crecimiento." />
+  <meta property="og:url" content="https://www.arpynet.com/" />
+  <meta property="og:image" content="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" />
+  <meta name="theme-color" content="#024883" />
   <style>
     :root {
-      --primary: #024883;
-      --primary-dark: #004371;
-      --accent: #f9a02c;
-      --white: #ffffff;
-      --bg-light: #f3f8ff;
-      --bg-soft: #eef5ff;
-      --text: #12263a;
-      --text-muted: #4a6078;
-      --border: #d9e6f4;
+      --blue: #024883;
+      --blue-deep: #004371;
+      --orange: #f9a02c;
+      --text: #0f2940;
+      --text-soft: #39546f;
+      --bg: #ffffff;
+      --bg-soft: #f3f8ff;
+      --border: #d7e3f0;
+      --success: #0d7a48;
       --radius: 16px;
-      --shadow-sm: 0 8px 20px rgba(2, 72, 131, 0.08);
-      --shadow-md: 0 16px 36px rgba(2, 72, 131, 0.14);
-      --shadow-lg: 0 24px 52px rgba(2, 72, 131, 0.2);
-      --container: min(1180px, 92%);
-      --header-height: 82px;
-      --tr: 0.3s ease;
+      --shadow-sm: 0 8px 20px rgba(2, 72, 131, 0.1);
+      --shadow-md: 0 16px 34px rgba(2, 72, 131, 0.14);
+      --container: min(1160px, 92%);
+      --header-h: 78px;
+      --ease: 280ms cubic-bezier(.2,.7,.2,1);
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 260px);
+      background: linear-gradient(180deg, #f8fbff 0, #fff 280px);
       line-height: 1.65;
-      letter-spacing: 0.01em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
+    a { color: inherit; text-decoration: none; }
 
-    .container { width: var(--container); margin-inline: auto; }
-
-    h1, h2, h3 {
-      margin: 0 0 14px;
-      line-height: 1.2;
-      color: var(--primary-dark);
-      letter-spacing: -0.01em;
+    .skip-link {
+      position: absolute;
+      left: 8px;
+      top: -40px;
+      background: var(--blue);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      z-index: 999;
     }
+    .skip-link:focus { top: 8px; }
 
-    h1 { font-size: clamp(2.1rem, 4.8vw, 3.4rem); }
-    h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); }
-    h3 { font-size: clamp(1.05rem, 2vw, 1.24rem); }
-
-    p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
+    .container { width: var(--container); margin: 0 auto; }
+    .section { padding: 86px 0; }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: var(--primary);
       text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .78rem;
+      font-weight: 800;
+      color: var(--blue);
       margin-bottom: 12px;
     }
-
     .eyebrow::before {
       content: "";
-      width: 26px;
+      width: 24px;
       height: 2px;
-      border-radius: 4px;
-      background: var(--accent);
+      border-radius: 2px;
+      background: var(--orange);
     }
 
-    .section { padding: 88px 0; }
-
-    .section-header {
-      max-width: 780px;
-      margin-bottom: 38px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 24px;
-      border-radius: 999px;
-      border: 2px solid transparent;
-      font-weight: 700;
-      font-size: 0.95rem;
-      white-space: nowrap;
-      transition: transform var(--tr), box-shadow var(--tr), background var(--tr), color var(--tr), border-color var(--tr);
-      cursor: pointer;
-    }
-
-    .btn:focus-visible,
-    a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    select:focus-visible {
-      outline: 3px solid rgba(249, 160, 44, 0.45);
-      outline-offset: 2px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #f9a02c 0%, #ffb84f 100%);
-      color: #1e2734;
-      box-shadow: 0 14px 28px rgba(249, 160, 44, 0.34);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 34px rgba(249, 160, 44, 0.42);
-    }
-
-    .btn-secondary {
-      border-color: rgba(255, 255, 255, 0.7);
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(6px);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.16);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      background: rgba(2, 72, 131, 0.08);
-    }
+    h1,h2,h3 { margin: 0 0 14px; line-height: 1.2; color: var(--blue-deep); }
+    h1 { font-size: clamp(2.05rem, 4.6vw, 3.3rem); }
+    h2 { font-size: clamp(1.65rem, 3.5vw, 2.4rem); }
+    h3 { font-size: clamp(1.04rem, 2.2vw, 1.25rem); }
+    p { margin: 0; color: var(--text-soft); }
 
     .header {
       position: sticky;
       top: 0;
       z-index: 100;
-      height: var(--header-height);
+      height: var(--header-h);
       display: flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255,255,255,.95);
+      border-bottom: 1px solid rgba(2,72,131,.15);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(2, 72, 131, 0.12);
-      transition: box-shadow var(--tr), background var(--tr);
+      transition: box-shadow var(--ease), background var(--ease);
     }
-
     .header.scrolled {
-      box-shadow: var(--shadow-sm);
-      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      background: rgba(255,255,255,.99);
     }
 
-    .header-inner {
+    .header-wrap {
       width: var(--container);
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 16px;
     }
 
-    .brand img { width: min(194px, 40vw); height: auto; }
+    .brand img { width: min(188px, 42vw); height: auto; }
 
-    .menu-toggle {
+    .menu-btn {
       display: none;
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: var(--white);
+      background: #fff;
       align-items: center;
       justify-content: center;
+      color: var(--blue-deep);
       cursor: pointer;
-      color: var(--primary-dark);
     }
-
-    .menu-toggle span,
-    .menu-toggle span::before,
-    .menu-toggle span::after {
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after {
       content: "";
       width: 18px;
       height: 2px;
-      border-radius: 2px;
       background: currentColor;
+      border-radius: 2px;
       display: block;
       position: relative;
+      transition: transform var(--ease), opacity var(--ease);
     }
-
-    .menu-toggle span::before { position: absolute; top: -6px; }
-    .menu-toggle span::after { position: absolute; top: 6px; }
+    .menu-btn span::before { position: absolute; top: -6px; }
+    .menu-btn span::after { position: absolute; top: 6px; }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
-
     .nav-list {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       gap: 14px;
-      align-items: center;
+      margin: 0;
+      padding: 0;
     }
-
     .nav-list a {
-      color: var(--primary-dark);
-      font-weight: 650;
-      font-size: 0.92rem;
+      font-size: .93rem;
+      font-weight: 700;
+      color: var(--blue-deep);
       padding: 8px 4px;
       position: relative;
     }
-
     .nav-list a::after {
       content: "";
       position: absolute;
-      left: 4px;
-      right: 4px;
-      bottom: 4px;
+      left: 4px; right: 4px; bottom: 4px;
       height: 2px;
       border-radius: 2px;
-      background: var(--accent);
+      background: var(--orange);
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform var(--tr);
+      transition: transform var(--ease);
     }
-
     .nav-list a:hover::after,
-    .nav-list a.active::after {
-      transform: scaleX(1);
-      transform-origin: left;
+    .nav-list a[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
+
+    .btn {
+      border: 2px solid transparent;
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-size: .94rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: transform var(--ease), box-shadow var(--ease), background var(--ease), border-color var(--ease);
+      white-space: nowrap;
     }
+    .btn-primary {
+      background: linear-gradient(135deg,#f9a02c,#ffb84f);
+      color: #1f2d3a;
+      box-shadow: 0 12px 24px rgba(249,160,44,.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(249,160,44,.45); }
+    .btn-ghost { border-color: rgba(255,255,255,.72); color: #fff; background: rgba(255,255,255,.08); }
+    .btn-ghost:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
+    .btn-outline { border-color: var(--blue); color: var(--blue); }
+    .btn-outline:hover { background: rgba(2,72,131,.08); }
 
     .hero {
+      padding: 90px 0 94px;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(249,160,44,.2), transparent 38%),
+        radial-gradient(circle at 88% 18%, rgba(110,176,241,.23), transparent 34%),
+        linear-gradient(130deg,#024883 0%,#004371 64%, #00395f 100%);
+      color: #fff;
       position: relative;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 8% 10%, rgba(249, 160, 44, 0.22), transparent 40%),
-        radial-gradient(circle at 95% 16%, rgba(78, 154, 230, 0.22), transparent 37%),
-        linear-gradient(132deg, #01477f 0%, #01345d 55%, #003156 100%);
-      color: var(--white);
-      padding: 86px 0 94px;
     }
-
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+      background: linear-gradient(180deg, rgba(255,255,255,.07), transparent);
       pointer-events: none;
     }
-
     .hero-grid {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 44px;
-      align-items: center;
       width: var(--container);
       margin: 0 auto;
-    }
-
-    .hero-copy p {
-      color: rgba(255,255,255,0.94);
-      max-width: 690px;
-      font-size: 1.07rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
-    }
-
-    .cta-badge {
-      margin-top: 18px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.24);
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.95);
-    }
-
-    .hero-panel {
-      background: linear-gradient(160deg, rgba(255,255,255,0.16), rgba(255,255,255,0.05));
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 24px;
-      padding: 24px;
-      backdrop-filter: blur(8px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .signal-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(130px,1fr));
-      gap: 12px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
     }
+    .hero p { color: rgba(255,255,255,.96); max-width: 660px; font-size: 1.03rem; }
+    .hero-actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
 
-    .signal {
-      border-radius: 14px;
+    .tech-panel {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 22px 48px rgba(0,0,0,.2);
+      backdrop-filter: blur(6px);
+    }
+    .tech-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+    .tech-item {
+      border: 1px solid rgba(255,255,255,.3);
+      background: rgba(255,255,255,.12);
+      border-radius: 12px;
       padding: 14px;
-      border: 1px solid rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.12);
+      font-size: .85rem;
     }
+    .tech-item strong { display: block; font-size: .96rem; margin-bottom: 4px; color: #fff; }
 
-    .signal strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #fff;
-      font-size: 0.96rem;
-    }
+    .section-header { max-width: 760px; margin-bottom: 36px; }
 
-    .signal span { font-size: 0.83rem; color: rgba(255,255,255,0.9); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; }
 
     .card {
-      background: var(--white);
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      padding: 22px;
       box-shadow: var(--shadow-sm);
-      transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr), background var(--tr);
+      transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
     }
-
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(2,72,131,0.33);
+      border-color: rgba(2,72,131,.35);
     }
 
     .icon {
-      width: 46px;
-      height: 46px;
+      width: 44px; height: 44px;
       border-radius: 12px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(140deg, rgba(2,72,131,0.14), rgba(2,72,131,0.06));
-      color: var(--primary);
-      margin-bottom: 14px;
-    }
-
-    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
-
-    .service-card {
-      position: relative;
-      padding: 24px;
-      overflow: hidden;
-      background: linear-gradient(165deg, #ffffff 0%, #f7fbff 100%);
-      isolation: isolate;
-    }
-
-    .service-card::after {
-      content: "";
-      position: absolute;
-      right: -28px;
-      top: -28px;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(2,72,131,0.14), transparent 65%);
-      z-index: -1;
-    }
-
-    .service-card h3 { margin-bottom: 8px; }
-    .service-card p { font-size: 0.95rem; }
-
-    .highlight-cta {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .split-card {
-      padding: 26px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .split-card::before {
-      content: "";
-      position: absolute;
-      right: -30px;
-      bottom: -48px;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(2,72,131,0.12), transparent 68%);
-    }
-
-    .trust-band {
-      background: linear-gradient(180deg, #ffffff, #f4f9ff);
-    }
-
-    .news-card { padding: 22px; }
-
-    .news-thumb {
-      height: 150px;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      border: 1px solid rgba(2,72,131,0.15);
-      background:
-        linear-gradient(160deg, rgba(2,72,131,0.12), rgba(2,72,131,0.03)),
-        radial-gradient(circle at 20% 18%, rgba(249,160,44,0.24), transparent 36%),
-        #f4f8ff;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(2,72,131,0.1);
-      color: var(--primary-dark);
-      font-weight: 700;
-      font-size: 0.74rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      background: linear-gradient(140deg, rgba(2,72,131,.16), rgba(2,72,131,.06));
+      color: var(--blue);
       margin-bottom: 12px;
     }
 
-    .news-card a {
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg,#fff, #f7fbff);
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      right: -36px;
+      top: -36px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(2,72,131,.14), transparent 70%);
+    }
+
+    .benefits { background: linear-gradient(180deg,#fff,#f5f9ff); }
+    .sectors { background: var(--bg-soft); }
+
+    .trust-band .card strong {
+      color: var(--blue-deep);
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .blog-card .media {
+      height: 150px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(2,72,131,.16);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(249,160,44,.3), transparent 36%),
+        linear-gradient(145deg, rgba(2,72,131,.16), rgba(2,72,131,.04)),
+        #f5f9ff;
+    }
+    .tag {
       display: inline-flex;
-      margin-top: 14px;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(2,72,131,.1);
+      color: var(--blue-deep);
+      text-transform: uppercase;
       font-weight: 700;
-      color: var(--primary);
+      font-size: .73rem;
+      letter-spacing: .04em;
+      margin-bottom: 10px;
     }
+    .blog-card a { display: inline-flex; margin-top: 12px; font-weight: 700; color: var(--blue); }
+    .blog-card a:hover { color: #b06c00; }
 
-    .news-card a:hover { color: var(--accent); }
-
-    .contact-grid {
+    .contact-wrap {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 22px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 20px;
+      align-items: start;
     }
-
-    .panel { padding: 24px; }
 
     label {
       display: block;
       margin-bottom: 6px;
-      font-size: 0.86rem;
+      font-size: .86rem;
+      color: var(--blue-deep);
       font-weight: 700;
-      color: var(--primary-dark);
     }
+    .field + .field { margin-top: 12px; }
 
-    input, textarea, select {
+    input, select, textarea {
       width: 100%;
-      border: 1px solid #c8d9eb;
+      border: 1px solid #c6d8ea;
       border-radius: 10px;
-      background: #fbfdff;
       padding: 11px 12px;
       font: inherit;
       color: var(--text);
-      transition: border-color var(--tr), box-shadow var(--tr);
+      background: #fcfdff;
+      transition: border-color var(--ease), box-shadow var(--ease);
     }
-
-    input:focus, textarea:focus, select:focus {
+    input:focus, select:focus, textarea:focus {
       outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(2,72,131,0.14);
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(2,72,131,.16);
     }
-
     textarea { min-height: 120px; resize: vertical; }
 
-    .field + .field { margin-top: 12px; }
+    .form-msg {
+      margin-top: 12px;
+      font-size: .88rem;
+      color: var(--success);
+      display: none;
+    }
+    .form-msg.show { display: block; }
 
-    .contact-list { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 10px; }
-    .contact-list li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-muted); }
+    .contact-list {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+    .contact-list li { color: var(--text-soft); }
 
     .footer {
+      padding: 54px 0 22px;
       background:
-        radial-gradient(circle at 90% 10%, rgba(249,160,44,0.2), transparent 30%),
-        linear-gradient(145deg, #042f54 0%, #022746 100%);
-      color: rgba(255,255,255,0.88);
-      padding: 58px 0 22px;
-      margin-top: 32px;
+        radial-gradient(circle at 86% 14%, rgba(249,160,44,.2), transparent 30%),
+        linear-gradient(145deg,#043057,#022748);
+      color: rgba(255,255,255,.9);
     }
-
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr repeat(3,1fr);
+      grid-template-columns: 1.45fr repeat(3,1fr);
       gap: 24px;
       padding-bottom: 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
+      border-bottom: 1px solid rgba(255,255,255,.2);
     }
-
     .footer h3 { color: #fff; margin-bottom: 10px; font-size: 1.02rem; }
-
-    .footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
-    .footer a { color: rgba(255,255,255,0.88); font-size: 0.93rem; }
-    .footer a:hover { color: var(--accent); }
-
+    .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .footer a:hover { color: #ffd089; }
     .footer-bottom {
-      padding-top: 16px;
+      padding-top: 14px;
       display: flex;
       justify-content: space-between;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 14px;
-      color: rgba(255,255,255,0.74);
-      font-size: 0.86rem;
+      font-size: .85rem;
+      color: rgba(255,255,255,.74);
     }
 
     [data-reveal] {
       opacity: 0;
       transform: translateY(10px);
-      transition: opacity 0.56s ease, transform 0.56s ease;
+      transition: opacity 600ms ease, transform 600ms ease;
     }
+    [data-reveal].in { opacity: 1; transform: translateY(0); }
 
-    [data-reveal].visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1060px) {
-      .hero-grid,
-      .contact-grid,
-      .grid-4,
-      .grid-3,
-      .grid-2,
-      .footer-grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-
-      .hero-grid > :first-child,
-      .contact-grid > :first-child,
-      .footer-grid > :first-child {
-        grid-column: 1 / -1;
-      }
+    @media (max-width: 1080px) {
+      .hero-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .grid-3 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
     }
 
     @media (max-width: 860px) {
-      .menu-toggle { display: inline-flex; }
-
+      .menu-btn { display: inline-flex; }
       .nav {
         position: absolute;
-        top: calc(var(--header-height) + 6px);
-        left: 4%;
-        right: 4%;
-        flex-direction: column;
-        align-items: stretch;
+        left: 4%; right: 4%; top: calc(var(--header-h) + 6px);
         background: #fff;
         border: 1px solid var(--border);
         border-radius: 14px;
         box-shadow: var(--shadow-md);
         padding: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-8px);
-        transition: opacity var(--tr), transform var(--tr);
+        transition: opacity var(--ease), transform var(--ease);
       }
-
-      .nav.open {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-      }
-
+      .nav.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
       .nav-list { flex-direction: column; align-items: stretch; }
       .nav-list a { display: block; }
       .nav .btn { width: 100%; }
 
       .section { padding: 72px 0; }
-
-      .hero,
-      .footer { padding-top: 76px; }
-
-      .hero-grid,
-      .grid-4,
-      .grid-3,
-      .grid-2,
-      .contact-grid,
-      .footer-grid,
-      .signal-grid {
-        grid-template-columns: 1fr;
-      }
+      .hero { padding: 78px 0 84px; }
+      .grid-4, .grid-3, .grid-2, .tech-grid, .footer-grid { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
       }
     }
-</style>
+
+    :focus-visible {
+      outline: 3px solid rgba(249,160,44,.52);
+      outline-offset: 2px;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ARPYNET",
+    "url": "https://www.arpynet.com/",
+    "logo": "https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+51-980-583-087",
+      "contactType": "sales",
+      "email": "info@arpynet.com"
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. 28 de julio 363 Oficina 302"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-  <header class="header">
-    <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="ARPYNET inicio">
-        <img src="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" alt="Logo oficial de ARPYNET" width="194" height="57" />
+  <header class="header" id="inicio">
+    <div class="header-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio ARPYNET">
+        <img src="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" width="188" height="57" alt="Logo ARPYNET" />
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú">
         <span></span>
       </button>
-      <nav class="nav" id="nav" aria-label="Navegación principal">
+
+      <nav class="nav" id="siteNav" aria-label="Navegación principal">
         <ul class="nav-list">
-          <li><a class="active" href="index.html">Inicio</a></li>
-<li><a class="" href="nosotros.html">Nosotros</a></li>
-<li><a class="" href="servicios.html">Servicios</a></li>
-<li><a class="" href="beneficios.html">Beneficios</a></li>
-<li><a class="" href="sectores.html">Sectores</a></li>
-<li><a class="" href="blog.html">Blog</a></li>
-<li><a class="" href="contacto.html">Contacto</a></li>
+          <li><a href="#inicio" aria-current="true">Inicio</a></li>
+          <li><a href="#propuesta">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#sectores">Sectores</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a class="btn btn-primary" href="contacto.html">Solicitar cotización</a>
+        <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
       </nav>
     </div>
   </header>
 
-
-  <main>
-    <section class="hero">
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-grid">
-        <div class="hero-copy" data-reveal>
-          <span class="eyebrow">Tecnología B2B para operación crítica</span>
-          <h1>Soluciones TI confiables para empresas y entidades públicas</h1>
+        <div data-reveal>
+          <span class="eyebrow" style="color:#fff;">Tecnología B2B para continuidad operativa</span>
+          <h1 id="hero-title" style="color:#fff;">Soluciones TI confiables para empresas y entidades públicas</h1>
           <p>Infraestructura, nube, soporte y seguridad tecnológica en un solo proveedor, diseñados para garantizar continuidad operativa y crecimiento sostenible.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contacto.html">Solicitar cotización</a>
-            <a class="btn btn-secondary" href="contacto.html">Hablar con un especialista</a>
+            <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+            <a class="btn btn-ghost" href="#contacto">Hablar con un especialista</a>
           </div>
-          <span class="cta-badge">Cobertura para sector público y sector privado</span>
         </div>
-        <aside class="hero-panel" data-reveal aria-label="Bloque visual tecnológico">
-          <div class="signal-grid">
-            <article class="signal"><strong>Infraestructura</strong><span>Hosting, VPS y servidores dedicados.</span></article>
-            <article class="signal"><strong>Nube AWS</strong><span>Escalabilidad, resiliencia y eficiencia.</span></article>
-            <article class="signal"><strong>Comunicaciones</strong><span>Correo corporativo y API SMTP.</span></article>
-            <article class="signal"><strong>Soporte TI</strong><span>Mesa de ayuda Nivel 1 para usuarios.</span></article>
+
+        <aside class="tech-panel" aria-label="Capacidades de ARPYNET" data-reveal>
+          <div class="tech-grid">
+            <article class="tech-item"><strong>Infraestructura</strong>Hosting, VPS y dedicados para operación empresarial.</article>
+            <article class="tech-item"><strong>Nube en AWS</strong>Escalabilidad y resiliencia para entornos críticos.</article>
+            <article class="tech-item"><strong>Comunicaciones</strong>Correo corporativo y plataforma de mailing/API SMTP.</article>
+            <article class="tech-item"><strong>Soporte TI</strong>Mesa de ayuda Nivel 1 para continuidad del negocio.</article>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="propuesta" aria-labelledby="ttl-propuesta">
       <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="eyebrow">Visión institucional</span>
-          <h2>Una presencia corporativa diseñada para generar confianza y conversión</h2>
-          <p>Conozca nuestras capacidades, servicios y enfoque de continuidad operativa en páginas especializadas para cada sección del sitio.</p>
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Propuesta de valor</span>
+          <h2 id="ttl-propuesta">Respaldo tecnológico para la operación diaria de su organización</h2>
+          <p>En ARPYNET ayudamos a organizaciones del sector público y privado a implementar, optimizar y gestionar su infraestructura tecnológica con soluciones seguras, escalables y respaldadas por soporte especializado.</p>
+          <p style="margin-top:10px;">Integramos servicios de nube, servidores, comunicaciones y outsourcing TI para que su operación funcione de manera eficiente, continua y alineada a sus objetivos.</p>
+        </header>
+
+        <div class="grid-4">
+          <article class="card" data-reveal><h3>Continuidad operativa</h3><p>Arquitecturas enfocadas en estabilidad y disponibilidad constante.</p></article>
+          <article class="card" data-reveal><h3>Seguridad y cumplimiento</h3><p>Soluciones con buenas prácticas técnicas y soporte formal de servicio.</p></article>
+          <article class="card" data-reveal><h3>Escalabilidad real</h3><p>Servicios TI preparados para crecer junto a sus necesidades operativas.</p></article>
+          <article class="card" data-reveal><h3>Gestión integral</h3><p>Un solo aliado para infraestructura, nube, comunicaciones y outsourcing TI.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios" aria-labelledby="ttl-servicios">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Servicios</span>
+          <h2 id="ttl-servicios">Portafolio completo para sector público y privado</h2>
+          <p>Implementamos servicios diseñados para fortalecer su infraestructura tecnológica y mejorar la eficiencia de su operación.</p>
+        </header>
+
+        <div class="grid-4">
+          <article class="card service-card" data-reveal><h3>Hosting</h3><p>Alojamiento web confiable con alta disponibilidad y rendimiento optimizado para garantizar la presencia digital de su organización.</p></article>
+          <article class="card service-card" data-reveal><h3>Servidores VPS</h3><p>Infraestructura virtual flexible y escalable, ideal para aplicaciones empresariales que requieren control, estabilidad y crecimiento progresivo.</p></article>
+          <article class="card service-card" data-reveal><h3>Servidores Dedicados</h3><p>Capacidad exclusiva para cargas de trabajo críticas, con alto rendimiento, seguridad y control total de los recursos.</p></article>
+          <article class="card service-card" data-reveal><h3>Nube en AWS</h3><p>Implementación y gestión de soluciones en la nube con Amazon Web Services, orientadas a escalabilidad, resiliencia y eficiencia operativa.</p></article>
+          <article class="card service-card" data-reveal><h3>Licencias de software</h3><p>Comercialización y gestión de licencias empresariales (NOD32, Kaspersky, Sophos, Microsoft Office, Adobe, Foxit), asegurando cumplimiento y soporte.</p></article>
+          <article class="card service-card" data-reveal><h3>Correos empresariales</h3><p>Implementación de plataformas de correo corporativo con Google Workspace y Microsoft, con enfoque en productividad, seguridad y colaboración.</p></article>
+          <article class="card service-card" data-reveal><h3>Plataforma de mailing y API SMTP</h3><p>Soluciones de envío de correos masivos y transaccionales con alta entregabilidad, control y monitoreo de campañas.</p></article>
+          <article class="card service-card" data-reveal><h3>Outsourcing de TI (Mesa de ayuda – Nivel 1)</h3><p>Servicio de soporte técnico para usuarios finales, orientado a la atención eficiente de incidencias y continuidad operativa.</p></article>
+        </div>
+
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;" data-reveal>
+          <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+          <a class="btn btn-outline" href="#contacto">Migrar a la nube</a>
+          <a class="btn btn-outline" href="#contacto">Implementar solución TI</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section benefits" id="beneficios" aria-labelledby="ttl-beneficios">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Beneficios diferenciales</span>
+          <h2 id="ttl-beneficios">Razones para confiar en ARPYNET como aliado tecnológico</h2>
+        </header>
+
         <div class="grid-3">
-          <article class="card panel" data-reveal>
-            <h3>Servicios especializados</h3>
-            <p>Infraestructura, nube, licencias, correo y outsourcing TI en un portafolio integral.</p>
-            <div class="highlight-cta"><a class="btn btn-outline" href="servicios.html">Ver servicios</a></div>
+          <article class="card" data-reveal><h3>Soporte técnico especializado</h3><p>Acompañamiento profesional para resolver incidencias y mantener su operación en marcha.</p></article>
+          <article class="card" data-reveal><h3>Infraestructura confiable y escalable</h3><p>Plataformas diseñadas para sostener el crecimiento y responder a nuevas demandas.</p></article>
+          <article class="card" data-reveal><h3>Cobertura integral de servicios TI</h3><p>Un modelo integral que conecta infraestructura, nube, licencias y soporte en un solo ecosistema.</p></article>
+          <article class="card" data-reveal><h3>Experiencia en sector público y privado</h3><p>Gestión de requerimientos con enfoque operativo y formalidad según cada entorno institucional.</p></article>
+          <article class="card" data-reveal><h3>Optimización de costos operativos</h3><p>Soluciones que priorizan eficiencia tecnológica y mejor uso de recursos internos.</p></article>
+          <article class="card" data-reveal><h3>Enfoque en continuidad del negocio</h3><p>Diseño y soporte de servicios orientados a sostener la productividad y reducir riesgos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectors" id="sectores" aria-labelledby="ttl-sectores">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Sectores</span>
+          <h2 id="ttl-sectores">Soluciones adaptadas a cada tipo de organización</h2>
+        </header>
+
+        <div class="grid-2">
+          <article class="card" data-reveal>
+            <h3>Sector público</h3>
+            <p>Implementamos soluciones alineadas a requerimientos de estabilidad, continuidad operativa y cumplimiento, con enfoque en soporte estructurado y gestión formal de servicios.</p>
+            <div style="margin-top:14px;"><a class="btn btn-primary" href="#contacto">Solicitar propuesta técnica</a></div>
           </article>
-          <article class="card panel" data-reveal>
-            <h3>Sectores objetivo</h3>
-            <p>Soluciones adaptadas para instituciones públicas y empresas privadas.</p>
-            <div class="highlight-cta"><a class="btn btn-outline" href="sectores.html">Ver sectores</a></div>
-          </article>
-          <article class="card panel" data-reveal>
-            <h3>Contacto comercial</h3>
-            <p>Converse con un especialista y reciba una propuesta técnica alineada a su necesidad.</p>
-            <div class="highlight-cta"><a class="btn btn-primary" href="contacto.html">Solicitar propuesta técnica</a></div>
+          <article class="card" data-reveal>
+            <h3>Sector privado</h3>
+            <p>Acompañamos el crecimiento empresarial con soluciones ágiles, escalables y orientadas a optimizar procesos, mejorar la productividad y reducir tiempos de respuesta.</p>
+            <div style="margin-top:14px;"><a class="btn btn-primary" href="#contacto">Implementar solución TI</a></div>
           </article>
         </div>
       </div>
     </section>
-  </main>
 
+    <section class="section trust-band" aria-labelledby="ttl-trust">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Confianza y respaldo</span>
+          <h2 id="ttl-trust">Compromiso permanente con la operación de nuestros clientes</h2>
+          <p>Trabajamos con una visión de largo plazo para sostener la continuidad operativa y la evolución tecnológica de cada organización.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="card" data-reveal><strong>Atención especializada</strong><p>Equipo técnico enfocado en soporte oportuno, seguimiento y resolución eficiente de requerimientos.</p></article>
+          <article class="card" data-reveal><strong>Continuidad de servicios</strong><p>Infraestructura y procesos orientados a reducir interrupciones y proteger la productividad.</p></article>
+          <article class="card" data-reveal><strong>Cobertura tecnológica integral</strong><p>Desde infraestructura y nube hasta licencias y comunicaciones, en un esquema de gestión unificado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blog" aria-labelledby="ttl-blog">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Blog y novedades</span>
+          <h2 id="ttl-blog">Contenido técnico y actualizaciones frecuentes de ARPYNET</h2>
+          <p>Sección preparada para reemplazarse por un flujo dinámico de publicaciones en el futuro.</p>
+        </header>
+
+        <div class="grid-3">
+          <article class="card blog-card" data-reveal>
+            <div class="media" aria-hidden="true"></div>
+            <span class="tag">Infraestructura</span>
+            <h3>Cómo preparar su plataforma TI para escalar sin fricciones</h3>
+            <p>Buenas prácticas para planificar crecimiento de servicios, cargas y recursos de forma ordenada y segura.</p>
+            <a href="#" aria-label="Leer más sobre infraestructura">Leer más →</a>
+          </article>
+          <article class="card blog-card" data-reveal>
+            <div class="media" aria-hidden="true"></div>
+            <span class="tag">Nube</span>
+            <h3>Migración a la nube: decisiones clave para una transición segura</h3>
+            <p>Aspectos técnicos y operativos que permiten migrar con control, continuidad y una estrategia clara.</p>
+            <a href="#" aria-label="Leer más sobre nube">Leer más →</a>
+          </article>
+          <article class="card blog-card" data-reveal>
+            <div class="media" aria-hidden="true"></div>
+            <span class="tag">Productividad</span>
+            <h3>Correos corporativos y colaboración: lineamientos para mayor eficiencia</h3>
+            <p>Recomendaciones para fortalecer la comunicación interna y proteger la información organizacional.</p>
+            <a href="#" aria-label="Leer más sobre productividad">Leer más →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto" aria-labelledby="ttl-contacto">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <span class="eyebrow">Contacto</span>
+          <h2 id="ttl-contacto">Conversemos sobre su infraestructura tecnológica</h2>
+          <p>Cuéntenos sus necesidades y le ayudaremos a identificar la mejor solución para su organización. Nuestro equipo evaluará su caso y le brindará una propuesta adecuada a sus requerimientos.</p>
+        </header>
+
+        <div class="contact-wrap">
+          <section class="card" data-reveal aria-label="Formulario de contacto">
+            <form id="contactForm" novalidate>
+              <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required /></div>
+              <div class="field"><label for="empresa">Empresa / Institución</label><input id="empresa" name="empresa" type="text" autocomplete="organization" required /></div>
+              <div class="field"><label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" autocomplete="email" required /></div>
+              <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+              <div class="field">
+                <label for="servicio">Tipo de servicio requerido</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="" selected disabled>Seleccione una opción</option>
+                  <option>Hosting</option><option>Servidores VPS</option><option>Servidores Dedicados</option><option>Nube en AWS</option>
+                  <option>Licencias de software</option><option>Correos empresariales</option><option>Plataforma de mailing y API SMTP</option>
+                  <option>Outsourcing de TI</option><option>Otro</option>
+                </select>
+              </div>
+              <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+              <button class="btn btn-primary" type="submit">Contáctanos</button>
+              <p class="form-msg" id="formMsg" role="status" aria-live="polite">Nos pondremos en contacto a la brevedad.</p>
+            </form>
+          </section>
+
+          <aside class="card" data-reveal>
+            <h3>Información de contacto</h3>
+            <p>Nos pondremos en contacto a la brevedad.</p>
+            <ul class="contact-list">
+              <li><strong>Correo:</strong> <a href="mailto:info@arpynet.com">info@arpynet.com</a></li>
+              <li><strong>Celular / WhatsApp:</strong> <a href="https://wa.me/51980583087" target="_blank" rel="noopener">980583087</a></li>
+              <li><strong>Dirección:</strong> Av. 28 de julio 363 Oficina 302</li>
+            </ul>
+            <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btn-primary" href="#contacto">Solicitar propuesta técnica</a>
+              <a class="btn btn-outline" href="#contacto">Evaluar mi infraestructura</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -696,21 +729,21 @@
         <section>
           <h3>Navegación</h3>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#propuesta">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
           </ul>
         </section>
         <section>
           <h3>Servicios clave</h3>
           <ul>
-            <li><a href="servicios.html">Hosting y VPS</a></li>
-            <li><a href="servicios.html">Servidores Dedicados</a></li>
-            <li><a href="servicios.html">Nube en AWS</a></li>
-            <li><a href="servicios.html">Correos y Licencias</a></li>
-            <li><a href="servicios.html">Outsourcing TI</a></li>
+            <li><a href="#servicios">Hosting y VPS</a></li>
+            <li><a href="#servicios">Servidores Dedicados</a></li>
+            <li><a href="#servicios">Nube en AWS</a></li>
+            <li><a href="#servicios">Correos y Licencias</a></li>
+            <li><a href="#servicios">Outsourcing TI</a></li>
           </ul>
         </section>
         <section>
@@ -729,40 +762,71 @@
     </div>
   </footer>
 
-
   <script>
     const header = document.querySelector('.header');
-    const toggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('nav');
+    const menuBtn = document.getElementById('menuBtn');
+    const siteNav = document.getElementById('siteNav');
+    const navLinks = document.querySelectorAll('.nav-list a');
+    const sections = [...document.querySelectorAll('main section[id]')];
     const revealItems = document.querySelectorAll('[data-reveal]');
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
 
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 8);
-    }, { passive: true });
+    const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 12);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
 
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
+    menuBtn.addEventListener('click', () => {
+      const open = siteNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
     });
 
-    document.addEventListener('click', (event) => {
-      if (!nav.contains(event.target) && !toggle.contains(event.target) && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener('click', (e) => {
+      if (!siteNav.contains(e.target) && !menuBtn.contains(e.target) && siteNav.classList.contains('open')) {
+        siteNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
       }
     });
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
+    navLinks.forEach(link => link.addEventListener('click', () => {
+      if (window.innerWidth <= 860) {
+        siteNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }));
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.14 });
 
-    revealItems.forEach((item) => revealObserver.observe(item));
+    revealItems.forEach(el => observer.observe(el));
+
+    const sectionSpy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.removeAttribute('aria-current'));
+          const match = document.querySelector(`.nav-list a[href="#${entry.target.id}"]`);
+          if (match) match.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => sectionSpy.observe(section));
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      formMsg.classList.add('show');
+      form.reset();
+    });
   </script>
-
 </body>
 </html>
