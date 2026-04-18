@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARPYNET | Soluciones TI confiables para empresas y entidades públicas</title>
+  <meta name="description" content="ARPYNET brinda soluciones TI para sector público y privado: hosting, VPS, servidores dedicados, nube AWS, licencias, correo corporativo, mailing API SMTP y outsourcing TI." />
+  <style>
+    :root {
+      --primary: #024883;
+      --primary-dark: #004371;
+      --accent: #f9a02c;
+      --white: #ffffff;
+      --bg-light: #f5f9ff;
+      --text: #1c2b3a;
+      --text-muted: #4c5f75;
+      --border: #dbe6f2;
+      --shadow: 0 15px 35px rgba(2, 72, 131, 0.12);
+      --radius: 14px;
+      --container: min(1150px, 92%);
+      --header-height: 78px;
+      --transition: 0.28s ease;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(to bottom, #f8fbff 0%, #ffffff 260px);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container { width: var(--container); margin: 0 auto; }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 14px;
+      color: var(--primary-dark);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.65rem, 3.8vw, 2.35rem); }
+    h3 { font-size: 1.18rem; }
+
+    p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 24px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      font-weight: 700;
+      font-size: 0.96rem;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn:focus-visible,
+    .menu-toggle:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(249, 160, 44, 0.45);
+      outline-offset: 2px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #1f2a37;
+      box-shadow: 0 10px 22px rgba(249, 160, 44, 0.33);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(249, 160, 44, 0.38);
+      background: #ffac3f;
+    }
+
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.75);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+    }
+
+    .header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 120;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(2, 72, 131, 0.12);
+      transition: box-shadow var(--transition), background var(--transition);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 8px 20px rgba(2, 72, 131, 0.13);
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .header-inner {
+      width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .brand img {
+      width: min(182px, 38vw);
+      height: auto;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-list a {
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      position: relative;
+      padding: 6px 2px;
+    }
+
+    .nav-list a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--transition);
+    }
+
+    .nav-list a:hover::after,
+    .nav-list a.active::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--primary-dark);
+      position: relative;
+      transition: transform var(--transition), opacity var(--transition);
+      content: "";
+    }
+
+    .menu-toggle span::before { position: absolute; top: -6px; }
+    .menu-toggle span::after { position: absolute; top: 6px; }
+
+    .hero {
+      padding-top: calc(var(--header-height) + 54px);
+      padding-bottom: 86px;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(249, 160, 44, 0.17), transparent 33%),
+        radial-gradient(circle at 92% 22%, rgba(2, 72, 131, 0.18), transparent 39%),
+        linear-gradient(115deg, #034e8d 0%, #003762 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), transparent);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      width: var(--container);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.92);
+      max-width: 680px;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(3px);
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(130px, 1fr));
+      gap: 13px;
+    }
+
+    .visual-card {
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+    }
+
+    .visual-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .visual-card span {
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .value-text {
+      display: grid;
+      gap: 16px;
+      max-width: 900px;
+    }
+
+    .pillars {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pillar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 8px 26px rgba(2, 72, 131, 0.07);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .pillar:hover,
+    .service-card:hover,
+    .benefit-card:hover,
+    .news-card:hover,
+    .sector-card:hover,
+    .trust-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(2, 72, 131, 0.14);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(2, 72, 131, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      color: var(--primary);
+    }
+
+    .services-grid,
+    .benefits-grid,
+    .news-grid,
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .service-card,
+    .benefit-card,
+    .news-card,
+    .trust-item,
+    .sector-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .service-card:hover,
+    .benefit-card:hover,
+    .news-card:hover,
+    .trust-item:hover,
+    .sector-card:hover {
+      border-color: rgba(2, 72, 131, 0.36);
+    }
+
+    .service-card p,
+    .benefit-card p,
+    .news-card p,
+    .trust-item p,
+    .sector-card p,
+    .contact-card p {
+      font-size: 0.95rem;
+    }
+
+    .benefits-grid,
+    .trust-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sectors {
+      background: var(--bg-light);
+    }
+
+    .sector-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .sector-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sector-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -50px -70px auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(2, 72, 131, 0.16), transparent 68%);
+      pointer-events: none;
+    }
+
+    .sector-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust {
+      background: linear-gradient(to bottom, #ffffff, #f7fbff);
+    }
+
+    .trust-item strong {
+      color: var(--primary-dark);
+      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .blog .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 22px;
+      flex-wrap: wrap;
+      max-width: none;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(2, 72, 131, 0.1);
+      color: var(--primary-dark);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    .news-card a {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .news-card a:hover {
+      color: var(--accent);
+    }
+
+    .contact {
+      background: linear-gradient(to bottom, #f7fbff, #ffffff);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-form,
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(2, 72, 131, 0.08);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field-group {
+      display: grid;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 0.87rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #c7d8ea;
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      color: var(--text);
+      background: #fcfdff;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 72, 131, 0.12);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 11px;
+    }
+
+    .contact-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-list strong {
+      color: var(--primary-dark);
+    }
+
+    .foot {
+      padding: 54px 0 22px;
+      background: #052d4e;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.45fr repeat(3, 1fr);
+      gap: 26px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .foot h3 {
+      color: var(--white);
+      margin-bottom: 10px;
+      font-size: 1.02rem;
+    }
+
+    .foot ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .foot a {
+      color: rgba(255,255,255,0.88);
+      font-size: 0.92rem;
+    }
+
+    .foot a:hover {
+      color: var(--accent);
+    }
+
+    .foot-bottom {
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.72);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    [data-reveal].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .nav-list { gap: 12px; }
+      .services-grid,
+      .pillars,
+      .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .benefits-grid,
+      .trust-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual { max-width: 540px; }
+
+      .foot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 830px) {
+      .menu-toggle { display: inline-flex; }
+
+      .nav {
+        position: absolute;
+        top: calc(var(--header-height) + 6px);
+        left: 4%;
+        right: 4%;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: 0 14px 34px rgba(2, 72, 131, 0.16);
+        padding: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity var(--transition), transform var(--transition);
+      }
+
+      .nav.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-list a {
+        display: block;
+        padding: 8px 2px;
+      }
+
+      .header .btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .section { padding: 72px 0; }
+
+      .hero { padding-top: calc(var(--header-height) + 30px); }
+
+      .sector-wrap,
+      .foot-grid,
+      .services-grid,
+      .pillars,
+      .benefits-grid,
+      .news-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="inicio">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="ARPYNET inicio">
+        <img src="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" alt="Logo de ARPYNET" width="182" height="57" />
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span></span>
+      </button>
+      <nav class="nav" id="mainNav" aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="#propuesta">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#sectores">Sectores</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div data-reveal>
+          <span class="eyebrow">Tecnología B2B para operar sin interrupciones</span>
+          <h1 id="hero-title">Soluciones TI confiables para empresas y entidades públicas</h1>
+          <p>Infraestructura, nube, soporte y seguridad tecnológica en un solo proveedor, diseñados para garantizar continuidad operativa y crecimiento sostenible.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Solicitar cotización</a>
+            <a href="#contacto" class="btn btn-secondary">Hablar con un especialista</a>
+          </div>
+        </div>
+        <aside class="hero-visual" aria-label="Resumen de capacidades ARPYNET" data-reveal>
+          <div class="visual-grid">
+            <article class="visual-card">
+              <strong>Infraestructura</strong>
+              <span>Hosting, VPS y dedicados listos para producción.</span>
+            </article>
+            <article class="visual-card">
+              <strong>Cloud AWS</strong>
+              <span>Escalabilidad y resiliencia para operaciones críticas.</span>
+            </article>
+            <article class="visual-card">
+              <strong>Soporte TI</strong>
+              <span>Mesa de ayuda Nivel 1 para usuarios finales.</span>
+            </article>
+            <article class="visual-card">
+              <strong>Comunicaciones</strong>
+              <span>Correo empresarial y plataforma de mailing/API SMTP.</span>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="propuesta">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Propuesta de valor</span>
+          <h2>Respaldo tecnológico para la operación diaria de su organización</h2>
+        </div>
+        <div class="value-text" data-reveal>
+          <p>En ARPYNET ayudamos a organizaciones del sector público y privado a implementar, optimizar y gestionar su infraestructura tecnológica con soluciones seguras, escalables y respaldadas por soporte especializado.</p>
+          <p>Integramos servicios de nube, servidores, comunicaciones y outsourcing TI para que su operación funcione de manera eficiente, continua y alineada a sus objetivos.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M12 4v16"/><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+            </div>
+            <h3>Continuidad operativa</h3>
+            <p>Arquitecturas enfocadas en estabilidad y disponibilidad constante.</p>
+          </article>
+          <article class="pillar" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.4 8.6-8 9-4.6-.4-8-4-8-9V7l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Seguridad y cumplimiento</h3>
+            <p>Soluciones con buenas prácticas técnicas y soporte formal de servicio.</p>
+          </article>
+          <article class="pillar" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h6l3-8 3 16 3-8h3"/></svg>
+            </div>
+            <h3>Escalabilidad real</h3>
+            <p>Servicios TI preparados para crecer junto a sus necesidades operativas.</p>
+          </article>
+          <article class="pillar" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h18v12H3z"/><path d="M8 20h8M12 16v4"/></svg>
+            </div>
+            <h3>Gestión integral</h3>
+            <p>Un solo aliado para infraestructura, nube, comunicaciones y soporte TI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Servicios</span>
+          <h2>Portafolio completo para sector público y privado</h2>
+          <p>Implementamos servicios diseñados para fortalecer su infraestructura tecnológica y mejorar la eficiencia de su operación.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="6" rx="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.6"/><path d="M7 7h.01M7 17h.01"/></svg></div>
+            <h3>Hosting</h3>
+            <p>Alojamiento web confiable con alta disponibilidad y rendimiento optimizado para garantizar la presencia digital de su organización.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg></div>
+            <h3>Servidores VPS</h3>
+            <p>Infraestructura virtual flexible y escalable, ideal para aplicaciones empresariales que requieren control, estabilidad y crecimiento progresivo.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h8M8 17h5"/></svg></div>
+            <h3>Servidores Dedicados</h3>
+            <p>Capacidad exclusiva para cargas de trabajo críticas, con alto rendimiento, seguridad y control total de los recursos.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 18h10a4 4 0 0 0 .5-7.97A5 5 0 0 0 7.2 9a4 4 0 0 0-.2 9Z"/></svg></div>
+            <h3>Nube en AWS</h3>
+            <p>Implementación y gestión de soluciones en la nube con Amazon Web Services, orientadas a escalabilidad, resiliencia y eficiencia operativa.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2M8 17v2h8v-2"/></svg></div>
+            <h3>Licencias de software</h3>
+            <p>Comercialización y gestión de licencias empresariales (NOD32, Kaspersky, Sophos, Microsoft Office, Adobe, Foxit), asegurando cumplimiento y soporte.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></div>
+            <h3>Correos empresariales</h3>
+            <p>Implementación de plataformas de correo corporativo con Google Workspace y Microsoft, con enfoque en productividad, seguridad y colaboración.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18"/><path d="M6 6h12v12H6z"/><path d="m10 9 4 3-4 3"/></svg></div>
+            <h3>Plataforma de mailing y API SMTP</h3>
+            <p>Soluciones de envío de correos masivos y transaccionales con alta entregabilidad, control y monitoreo de campañas.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 8h10M7 12h6M5 4h14a2 2 0 0 1 2 2v12l-4-3-4 3-4-3-4 3V6a2 2 0 0 1 2-2Z"/></svg></div>
+            <h3>Outsourcing de TI (Mesa de ayuda – Nivel 1)</h3>
+            <p>Servicio de soporte técnico para usuarios finales, orientado a la atención eficiente de incidencias y continuidad operativa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Beneficios diferenciales</span>
+          <h2>Razones para confiar en ARPYNET como aliado tecnológico</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Soporte técnico especializado</h3>
+            <p>Acompañamiento profesional para resolver incidencias y mantener su operación en marcha.</p>
+          </article>
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg></div>
+            <h3>Infraestructura confiable y escalable</h3>
+            <p>Plataformas diseñadas para sostener el crecimiento y responder a nuevas demandas.</p>
+          </article>
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 5-9 5-9-5 9-5Z"/><path d="m3 8 9 5 9-5"/><path d="m3 13 9 5 9-5"/></svg></div>
+            <h3>Cobertura integral de servicios TI</h3>
+            <p>Un modelo integral que conecta infraestructura, nube, licencias y soporte en un solo ecosistema.</p>
+          </article>
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5h14v14H5z"/><path d="M9 9h6v6H9z"/></svg></div>
+            <h3>Experiencia en sector público y privado</h3>
+            <p>Gestión de requerimientos con enfoque operativo y formalidad según cada entorno institucional.</p>
+          </article>
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h16"/><path d="m8 14 3-3 3 2 4-4"/></svg></div>
+            <h3>Optimización de costos operativos</h3>
+            <p>Soluciones que priorizan eficiencia tecnológica y mejor uso de recursos internos.</p>
+          </article>
+          <article class="benefit-card" data-reveal>
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+            <h3>Enfoque en continuidad del negocio</h3>
+            <p>Diseño y soporte de servicios orientados a sostener la productividad y reducir riesgos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectors" id="sectores">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Sectores</span>
+          <h2>Soluciones adaptadas a cada tipo de organización</h2>
+        </div>
+        <div class="sector-wrap">
+          <article class="sector-card" data-reveal>
+            <h3>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V8h12v12M9 8V4h6v4"/></svg></span>
+              Sector público
+            </h3>
+            <p>Implementamos soluciones alineadas a requerimientos de estabilidad, continuidad operativa y cumplimiento, con enfoque en soporte estructurado y gestión formal de servicios.</p>
+            <div class="hero-actions" style="margin-top:18px;">
+              <a class="btn btn-primary" href="#contacto">Solicitar propuesta técnica</a>
+            </div>
+          </article>
+          <article class="sector-card" data-reveal>
+            <h3>
+              <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18M6 20V10h4v10m4 0V6h4v14"/></svg></span>
+              Sector privado
+            </h3>
+            <p>Acompañamos el crecimiento empresarial con soluciones ágiles, escalables y orientadas a optimizar procesos, mejorar la productividad y reducir tiempos de respuesta.</p>
+            <div class="hero-actions" style="margin-top:18px;">
+              <a class="btn btn-primary" href="#contacto">Implementar solución TI</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust" id="respaldo">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Confianza y respaldo</span>
+          <h2>Compromiso permanente con la operación de nuestros clientes</h2>
+          <p>Trabajamos con una visión de largo plazo para sostener la continuidad operativa y la evolución tecnológica de cada organización.</p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-item" data-reveal>
+            <strong>Atención especializada</strong>
+            <p>Equipo técnico enfocado en soporte oportuno, seguimiento y resolución eficiente de requerimientos.</p>
+          </article>
+          <article class="trust-item" data-reveal>
+            <strong>Continuidad de servicios</strong>
+            <p>Infraestructura y procesos orientados a reducir interrupciones y proteger la productividad.</p>
+          </article>
+          <article class="trust-item" data-reveal>
+            <strong>Cobertura tecnológica integral</strong>
+            <p>Desde infraestructura y nube hasta licencias y comunicaciones, en un esquema de gestión unificado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog" id="blog">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div>
+            <span class="eyebrow">Blog y novedades</span>
+            <h2>Contenido técnico y actualizaciones frecuentes de ARPYNET</h2>
+          </div>
+          <a class="btn btn-primary" href="#contacto">Evaluar mi infraestructura</a>
+        </div>
+        <div class="news-grid">
+          <article class="news-card" data-reveal>
+            <span class="tag">Infraestructura</span>
+            <h3>Cómo preparar su plataforma TI para escalar sin fricciones</h3>
+            <p>Buenas prácticas para planificar crecimiento de servicios, cargas y recursos de forma ordenada y segura.</p>
+            <a href="#" aria-label="Leer más sobre infraestructura">Leer más →</a>
+          </article>
+          <article class="news-card" data-reveal>
+            <span class="tag">Nube</span>
+            <h3>Migración a la nube: decisiones clave para una transición segura</h3>
+            <p>Aspectos técnicos y operativos que permiten migrar con control, continuidad y una estrategia clara.</p>
+            <a href="#" aria-label="Leer más sobre migración a la nube">Leer más →</a>
+          </article>
+          <article class="news-card" data-reveal>
+            <span class="tag">Productividad</span>
+            <h3>Correos corporativos y colaboración: lineamientos para mayor eficiencia</h3>
+            <p>Recomendaciones para fortalecer la comunicación interna y proteger la información organizacional.</p>
+            <a href="#" aria-label="Leer más sobre productividad">Leer más →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Contacto</span>
+          <h2>Conversemos sobre su infraestructura tecnológica</h2>
+          <p>Cuéntenos sus necesidades y le ayudaremos a identificar la mejor solución para su organización. Nuestro equipo evaluará su caso y le brindará una propuesta adecuada a sus requerimientos.</p>
+        </div>
+        <div class="contact-grid">
+          <section class="contact-form" aria-label="Formulario de contacto" data-reveal>
+            <form>
+              <div class="field-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required />
+              </div>
+              <div class="field-group">
+                <label for="empresa">Empresa / Institución</label>
+                <input id="empresa" name="empresa" type="text" autocomplete="organization" required />
+              </div>
+              <div class="field-group">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" required />
+              </div>
+              <div class="field-group">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="field-group">
+                <label for="servicio">Tipo de servicio requerido</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="" selected disabled>Seleccione una opción</option>
+                  <option>Hosting</option>
+                  <option>Servidores VPS</option>
+                  <option>Servidores Dedicados</option>
+                  <option>Nube en AWS</option>
+                  <option>Licencias de software</option>
+                  <option>Correos empresariales</option>
+                  <option>Plataforma de mailing y API SMTP</option>
+                  <option>Outsourcing de TI</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Contáctanos</button>
+            </form>
+          </section>
+
+          <aside class="contact-card" data-reveal>
+            <h3>Información de contacto</h3>
+            <p>Nos pondremos en contacto a la brevedad.</p>
+            <ul class="contact-list">
+              <li>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+                <div><strong>Correo:</strong> <a href="mailto:info@arpynet.com">info@arpynet.com</a></div>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a16 16 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C10 21 3 14 3 6c0-1 1-2 2-2Z"/></svg></span>
+                <div><strong>Celular / WhatsApp:</strong> <a href="https://wa.me/51980583087" target="_blank" rel="noopener">980583087</a></div>
+              </li>
+              <li>
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                <div><strong>Dirección:</strong> Av. 28 de julio 363 Oficina 302</div>
+              </li>
+            </ul>
+            <div class="hero-actions" style="margin-top:22px;">
+              <a class="btn btn-primary" href="#contacto">Migrar a la nube</a>
+              <a class="btn" style="border:2px solid var(--primary); color:var(--primary);" href="#contacto">Solicitar propuesta técnica</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="container">
+      <div class="foot-grid">
+        <section>
+          <h3>ARPYNET</h3>
+          <p>ARPYNET es una empresa especializada en soluciones de tecnología para el sector público y privado, brindando servicios de infraestructura, nube, comunicaciones y soporte TI.</p>
+        </section>
+        <section>
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#propuesta">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Servicios clave</h3>
+          <ul>
+            <li><a href="#servicios">Hosting y VPS</a></li>
+            <li><a href="#servicios">Servidores Dedicados</a></li>
+            <li><a href="#servicios">Nube en AWS</a></li>
+            <li><a href="#servicios">Correos y Licencias</a></li>
+            <li><a href="#servicios">Outsourcing TI</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:info@arpynet.com">info@arpynet.com</a></li>
+            <li><a href="https://wa.me/51980583087" target="_blank" rel="noopener">980583087</a></li>
+            <li><a href="#contacto">Av. 28 de julio 363 Oficina 302</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="foot-bottom">
+        <span>© ARPYNET – Todos los derechos reservados</span>
+        <span>arpynet.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.header');
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+    const sections = document.querySelectorAll('main section[id]');
+    const revealItems = document.querySelectorAll('[data-reveal]');
+
+    function onScrollHeader() {
+      header.classList.toggle('scrolled', window.scrollY > 16);
+    }
+
+    function closeMenu() {
+      nav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 830) closeMenu();
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!nav.contains(event.target) && !menuToggle.contains(event.target) && nav.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            const linkTarget = link.getAttribute('href').slice(1);
+            link.classList.toggle('active', linkTarget === entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+
+    window.addEventListener('scroll', onScrollHeader, { passive: true });
+    onScrollHeader();
+  </script>
+</body>
+</html>
