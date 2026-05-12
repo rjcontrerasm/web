@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libro de Reclamaciones | ARPYNET</title>
+  <meta name="description" content="Registre su reclamo o queja en el Libro de Reclamaciones virtual de ARPYNET conforme al Código de Protección y Defensa del Consumidor del Perú." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="https://www.arpynet.com/wp-content/uploads/2019/07/icono-arpynet-250-150x150.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Libro de Reclamaciones | ARPYNET" />
+  <meta property="og:description" content="Complete la hoja de reclamación de ARPYNET conforme a la normativa peruana." />
+  <meta property="og:image" content="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" />
+  <meta name="theme-color" content="#024883" />
+  <style>
+    :root {--primary:#024883;--primary-dark:#004371;--accent:#f9a02c;--text:#12283d;--muted:#4d6781;--border:#d8e5f2;--bg:#f6fbff;--radius:16px;--container:min(1120px,92%);--header-h:80px;--shadow:0 14px 34px rgba(2,72,131,.14);--tr:260ms cubic-bezier(.2,.7,.2,1)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);line-height:1.6;background:linear-gradient(180deg,#f8fbff 0,#fff 300px)}
+    a{text-decoration:none;color:inherit} img{max-width:100%;display:block} p{margin:0;color:var(--muted)} h1,h2,h3{margin:0 0 14px;color:var(--primary-dark);line-height:1.2}
+    .container{width:var(--container);margin:0 auto}
+    .header{position:fixed;inset:0 0 auto;z-index:120;height:var(--header-h);display:flex;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(9px);border-bottom:1px solid rgba(2,72,131,.14);transition:box-shadow var(--tr),background var(--tr)}
+    .header.scrolled{background:rgba(255,255,255,.98);box-shadow:0 8px 20px rgba(2,72,131,.12)}
+    .header-wrap{width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand img{width:min(188px,40vw);height:auto;object-fit:contain}
+    .menu{display:none;width:44px;height:44px;border:1px solid var(--border);border-radius:12px;background:#fff;align-items:center;justify-content:center;cursor:pointer}
+    .menu span,.menu span:before,.menu span:after{content:"";display:block;width:18px;height:2px;background:var(--primary-dark);position:relative}.menu span:before{position:absolute;top:-6px}.menu span:after{position:absolute;top:6px}
+    .nav{display:flex;align-items:center;gap:16px}.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:13px}.nav-list a{font-size:.91rem;font-weight:700;color:var(--primary-dark);padding:8px 4px;position:relative}
+    .nav-list a:after{content:"";position:absolute;left:4px;right:4px;bottom:4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform var(--tr)}.nav-list a:hover:after,.nav-list a.active:after{transform:scaleX(1);transform-origin:left}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 22px;font-weight:800;font-size:.94rem;border:2px solid transparent;transition:all var(--tr)}
+    .btn-main{background:linear-gradient(135deg,#f9a02c,#ffb84f);color:#1f2d3a;box-shadow:0 12px 24px rgba(249,160,44,.36)}
+    .hero{padding:calc(var(--header-h) + 58px) 0 36px;background:linear-gradient(145deg,#024883,#003f6f);color:#fff}.hero h1,.hero p{color:#fff}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#fff;margin-bottom:10px}.badge:before{content:"";width:24px;height:2px;background:var(--accent);border-radius:2px}
+    .content{padding:34px 0 70px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .field{display:grid;gap:7px}
+    label{font-size:.86rem;font-weight:700;color:var(--primary-dark)}
+    input,select,textarea{width:100%;border:1px solid #c7d9ea;border-radius:10px;padding:11px 12px;font:inherit;color:var(--text);background:#fff}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(2,72,131,.14)}
+    textarea{min-height:110px;resize:vertical}
+    .full{grid-column:1/-1}
+    .section-title{margin-top:20px;padding-top:14px;border-top:1px dashed #c9ddf0}
+    .note{margin-top:12px;padding:12px 14px;border:1px solid #cfe1f3;border-radius:12px;background:var(--bg);font-size:.9rem;color:#4c6b86}
+    .check{display:grid;grid-template-columns:20px 1fr;align-items:start;gap:10px;font-size:.9rem;color:#4c6b86}
+    .check input{margin-top:2px;width:16px;height:16px}
+    .actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .footer{margin-top:24px;position:relative;padding:68px 0 22px;background:radial-gradient(circle at 86% 13%,rgba(249,160,44,.22),transparent 32%),linear-gradient(145deg,#043057,#022748);color:rgba(255,255,255,.9);overflow:hidden}
+    .footer:before{content:"";position:absolute;inset:0 auto auto 0;height:4px;width:100%;background:linear-gradient(90deg,#f9a02c,#9ad2ff,#f9a02c)}
+    .footer-grid{display:grid;grid-template-columns:1.35fr repeat(3,1fr);gap:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.22);position:relative;z-index:1}
+    .footer h3{color:#fff;margin-bottom:10px;font-size:1.02rem}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}.footer a:hover{color:#ffd18b}
+    .copy{padding-top:12px;font-size:.85rem;color:rgba(255,255,255,.74);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+    @media (max-width:980px){.grid,.footer-grid{grid-template-columns:1fr}}
+    @media (max-width:860px){.menu{display:inline-flex}.nav{position:absolute;left:4%;right:4%;top:calc(var(--header-h) + 6px);background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:14px;flex-direction:column;align-items:stretch;gap:12px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:all var(--tr)}.nav.open{opacity:1;pointer-events:auto;transform:translateY(0)}.nav-list{flex-direction:column;align-items:stretch}.nav-list a{display:block}.nav .btn{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="header-wrap"><a class="brand" href="index.html" aria-label="ARPYNET inicio"><img src="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" alt="Logo ARPYNET" width="188" height="57"></a><button class="menu" id="menuBtn" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú"><span></span></button><nav class="nav" id="siteNav" aria-label="Navegación principal"><ul class="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="beneficios.html">Beneficios</a></li><li><a href="sectores.html">Sectores</a></li><li><a href="respaldo.html">Respaldo</a></li><li><a href="blog.html">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul><a class="btn btn-main" href="contacto.html">Solicitar cotización</a></nav></div></header>
+
+  <main>
+    <section class="hero"><div class="container"><span class="badge">Protección al consumidor</span><h1>Libro de Reclamaciones</h1><p>Complete esta hoja de reclamación de acuerdo con la Ley N.º 29571 y el Reglamento del Libro de Reclamaciones (D.S. N.º 011-2011-PCM y modificatorias).</p></div></section>
+
+    <section class="content"><div class="container"><article class="card">
+      <div class="note">
+        <strong>Importante:</strong> Los campos mínimos obligatorios incluyen nombre, DNI/CE, domicilio o correo electrónico, fecha y detalle de la reclamación. La respuesta se brinda en un plazo máximo de <strong>15 días hábiles</strong>.
+      </div>
+
+      <h2 class="section-title">1) Identificación del consumidor reclamante</h2>
+      <form>
+        <div class="grid">
+          <div class="field"><label for="nombres">Nombres y apellidos *</label><input id="nombres" name="nombres" required></div>
+          <div class="field"><label for="doc_tipo">Tipo de documento *</label><select id="doc_tipo" name="doc_tipo" required><option value="" disabled selected>Seleccione</option><option>DNI</option><option>CE</option><option>Pasaporte</option></select></div>
+          <div class="field"><label for="doc_numero">N.º documento *</label><input id="doc_numero" name="doc_numero" required></div>
+          <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel"></div>
+          <div class="field full"><label for="domicilio">Domicilio *</label><input id="domicilio" name="domicilio" required></div>
+          <div class="field"><label for="correo">Correo electrónico *</label><input id="correo" name="correo" type="email" required></div>
+          <div class="field"><label for="menor">¿Es menor de edad?</label><select id="menor" name="menor"><option>No</option><option>Sí</option></select></div>
+          <div class="field full"><label for="apoderado">Padre/Madre o representante (si aplica)</label><input id="apoderado" name="apoderado"></div>
+        </div>
+
+        <h2 class="section-title">2) Identificación del bien contratado</h2>
+        <div class="grid">
+          <div class="field"><label for="tipo_bien">Tipo *</label><select id="tipo_bien" name="tipo_bien" required><option value="" disabled selected>Seleccione</option><option>Producto</option><option>Servicio</option></select></div>
+          <div class="field"><label for="monto">Monto reclamado (S/)</label><input id="monto" name="monto" type="number" step="0.01" min="0"></div>
+          <div class="field full"><label for="descripcion">Descripción del producto/servicio *</label><input id="descripcion" name="descripcion" required></div>
+        </div>
+
+        <h2 class="section-title">3) Detalle de la reclamación y pedido del consumidor</h2>
+        <div class="grid">
+          <div class="field"><label for="tipo_reclamo">Tipo de manifestación *</label><select id="tipo_reclamo" name="tipo_reclamo" required><option value="" disabled selected>Seleccione</option><option>Reclamo (disconformidad con producto/servicio)</option><option>Queja (malestar por atención al público)</option></select></div>
+          <div class="field"><label for="fecha">Fecha *</label><input id="fecha" name="fecha" type="date" required></div>
+          <div class="field full"><label for="detalle">Detalle de la reclamación o queja *</label><textarea id="detalle" name="detalle" required></textarea></div>
+          <div class="field full"><label for="pedido">Pedido concreto del consumidor *</label><textarea id="pedido" name="pedido" required></textarea></div>
+        </div>
+
+        <h2 class="section-title">4) Acciones adoptadas por el proveedor (ARPYNET)</h2>
+        <div class="grid">
+          <div class="field full"><label for="acciones">Espacio de registro interno del proveedor</label><textarea id="acciones" name="acciones" placeholder="Este campo será completado por ARPYNET al evaluar su solicitud." readonly></textarea></div>
+        </div>
+
+        <div class="note" style="margin-top:14px;">
+          <p>El registro de esta hoja no impide acudir a otras vías de solución de controversias ni presentar denuncia ante INDECOPI.</p>
+          <p style="margin-top:6px"><strong>Canal de atención:</strong> info@arpynet.com | Av. 28 de julio 363 Oficina 302, Lima.</p>
+        </div>
+
+        <div style="display:grid;gap:10px;margin-top:14px;">
+          <label class="check"><input type="checkbox" required> Declaro que la información consignada es verdadera y autorizo el tratamiento de datos personales para atender esta solicitud.</label>
+          <label class="check"><input type="checkbox" required> Confirmo que he leído la definición de reclamo y queja.</label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-main" type="submit">Enviar hoja de reclamación</button>
+          <a class="btn" style="border-color:#024883;color:#024883" href="politica-privacidad.html">Ver política de privacidad</a>
+        </div>
+      </form>
+    </article></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><section><h3>ARPYNET</h3><p>ARPYNET es una empresa especializada en soluciones de tecnología para el sector público y privado, brindando servicios de infraestructura, nube, comunicaciones y soporte TI.</p></section><section><h3>Navegación</h3><ul><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="beneficios.html">Beneficios</a></li><li><a href="sectores.html">Sectores</a></li><li><a href="respaldo.html">Respaldo</a></li><li><a href="blog.html">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul></section><section><h3>Servicios</h3><ul><li><a href="servicios.html">Hosting</a></li><li><a href="servicios.html">Servidores VPS</a></li><li><a href="servicios.html">Nube en AWS</a></li><li><a href="servicios.html">Licencias</a></li><li><a href="servicios.html">Outsourcing TI</a></li></ul></section><section><h3>Contacto</h3><ul><li><a href="mailto:info@arpynet.com">info@arpynet.com</a></li><li><a href="https://wa.me/51980583087" target="_blank" rel="noopener">980583087</a></li><li>Av. 28 de julio 363 Oficina 302</li></ul><div style="display:flex;justify-content:flex-end;margin-top:10px;"><a href="libro-reclamaciones.html" aria-label="Libro de Reclamaciones" style="display:inline-flex;"><img src="https://www.tecnoweb.net/wp-content/uploads/2021/12/L_reclamaciones_V.png.webp" alt="Libro de Reclamaciones" width="170" height="84" style="width:170px;height:auto;object-fit:contain;"></a></div></section></div><div class="copy"><span>© ARPYNET – Todos los derechos reservados</span><span>arpynet.com</span></div></div></footer>
+
+  <script>
+    const header=document.querySelector('.header');
+    const menu=document.getElementById('menuBtn');
+    const nav=document.getElementById('siteNav');
+    const fecha=document.getElementById('fecha');
+    if (fecha) {
+      const today = new Date().toISOString().slice(0,10);
+      fecha.value = today;
+      fecha.max = today;
+    }
+
+    if(menu&&nav){
+      menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o));});
+      document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menu.contains(e.target)&&nav.classList.contains('open')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}});
+    }
+    window.addEventListener('scroll',()=>header&&header.classList.toggle('scrolled',window.scrollY>10),{passive:true});
+  </script>
+</body>
+</html>

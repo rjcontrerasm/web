@@ -1,0 +1,34 @@
+FORMULARIO DE SOLICITUD DE DERECHOS ARCO - ARPYNET
+
+1) DATOS DEL TITULAR
+- Nombres y apellidos:
+- DNI:
+- Correo electrónico:
+- Teléfono de contacto:
+- Dirección:
+
+2) DERECHO QUE DESEA EJERCER
+[ ] Acceso
+[ ] Rectificación
+[ ] Cancelación
+[ ] Oposición
+
+3) DETALLE DE LA SOLICITUD
+(Describa con claridad su solicitud y, de ser necesario, adjunte documentos de sustento)
+
+
+4) DOCUMENTOS ADJUNTOS
+[ ] Copia simple del DNI
+[ ] Carta poder (si aplica)
+[ ] Documento de representación legal (si aplica)
+[ ] Otros:
+
+5) DECLARACIÓN
+Declaro que la información proporcionada es veraz y autorizo su uso únicamente para la atención de la presente solicitud.
+
+Firma del titular o representante: __________________________
+Fecha: ____ / ____ / ______
+
+Canales de envío:
+- Correo: info@arpynet.com
+- Dirección: Av. 28 de julio 363 Oficina 302, Lima

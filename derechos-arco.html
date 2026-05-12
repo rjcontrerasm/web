@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ley de Protección de Datos Personales – Derechos ARCO | ARPYNET</title>
+  <meta name="description" content="Conozca cómo ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación y Oposición) en ARPYNET según la Ley N.º 29733 del Perú." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" type="image/png" href="https://www.arpynet.com/wp-content/uploads/2019/07/icono-arpynet-250-150x150.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ley de Protección de Datos Personales – Derechos ARCO | ARPYNET" />
+  <meta property="og:description" content="Información clara sobre los derechos ARCO y cómo presentar su solicitud en ARPYNET." />
+  <meta property="og:image" content="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" />
+  <meta name="theme-color" content="#024883" />
+  <style>
+    :root {
+      --primary: #024883;
+      --primary-dark: #004371;
+      --accent: #f9a02c;
+      --text: #12283d;
+      --muted: #4d6781;
+      --border: #d8e5f2;
+      --surface: #f7fbff;
+      --white: #ffffff;
+      --radius: 16px;
+      --container: min(1120px, 92%);
+      --header-h: 80px;
+      --shadow-sm: 0 10px 24px rgba(2, 72, 131, 0.1);
+      --shadow-md: 0 18px 36px rgba(2, 72, 131, 0.16);
+      --tr: 260ms cubic-bezier(.2, .7, .2, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background: linear-gradient(180deg, #f8fbff 0, #ffffff 320px);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    p { margin: 0; color: var(--muted); }
+    h1, h2, h3 { margin: 0 0 14px; color: var(--primary-dark); line-height: 1.2; letter-spacing: -0.01em; }
+    h1{font-size:2.6rem}
+    h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+    h3 { font-size: 1.1rem; }
+
+    .container { width: var(--container); margin: 0 auto; }
+    .section { padding: 68px 0; }
+
+    .header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 120;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(9px);
+      border-bottom: 1px solid rgba(2, 72, 131, .14);
+      transition: box-shadow var(--tr), background var(--tr);
+    }
+
+    .header.scrolled { background: rgba(255, 255, 255, .98); box-shadow: var(--shadow-sm); }
+
+    .header-wrap {
+      width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand img { width: min(188px, 40vw); height: auto; object-fit: contain; }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      content: "";
+      width: 18px;
+      height: 2px;
+      background: var(--primary-dark);
+      display: block;
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .menu-toggle span::before { position: absolute; top: -6px; }
+    .menu-toggle span::after { position: absolute; top: 6px; }
+
+    .nav { display: flex; align-items: center; gap: 16px; }
+    .nav-list { list-style: none; margin: 0; padding: 0; display: flex; gap: 13px; }
+    .nav-list a { font-size: .91rem; font-weight: 700; color: var(--primary-dark); padding: 8px 4px; position: relative; }
+    .nav-list a::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--tr);
+    }
+
+    .nav-list a:hover::after,
+    .nav-list a.active::after { transform: scaleX(1); transform-origin: left; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      padding: 12px 22px;
+      font-size: .94rem;
+      font-weight: 800;
+      transition: transform var(--tr), box-shadow var(--tr), background var(--tr), border-color var(--tr);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-main {
+      background: linear-gradient(135deg, #f9a02c, #ffb84f);
+      color: #1f2d3a;
+      box-shadow: 0 12px 24px rgba(249, 160, 44, .36);
+    }
+
+    .btn-main:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(249, 160, 44, .44); }
+
+    .hero {
+      padding: calc(var(--header-h) + 56px) 0 46px;
+      background:
+        radial-gradient(circle at 10% 16%, rgba(249,160,44,.2), transparent 38%),
+        radial-gradient(circle at 89% 20%, rgba(140,198,249,.26), transparent 34%),
+        linear-gradient(145deg, #024883, #003e6d);
+      color: #fff;
+    }
+
+    .hero h1, .hero p { color: #fff; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+
+    .grid { display: grid; gap: 22px; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .intro-grid { grid-template-columns: 1.1fr .9fr; align-items: start; }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .right-card {
+      border: 1px solid #cfe1f3;
+      border-radius: 14px;
+      padding: 16px;
+      background: linear-gradient(145deg, #fbfdff, #f4f9ff);
+    }
+
+    .right-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      background: linear-gradient(145deg, rgba(2,72,131,.16), rgba(2,72,131,.06));
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .list li + li { margin-top: 6px; }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .meta-item {
+      padding: 14px;
+      border: 1px dashed #b7cfe6;
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(2,72,131,.08), rgba(2,72,131,.03));
+      border: 1px solid #cde0f2;
+    }
+
+    .contact-box p + p { margin-top: 8px; }
+
+    .cta-wrap {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .cta-note { font-size: .85rem; color: #5d7995; }
+
+    .footer {
+      margin-top: 20px;
+      position: relative;
+      padding: 68px 0 22px;
+      background:
+        radial-gradient(circle at 86% 13%, rgba(249,160,44,.22), transparent 32%),
+        linear-gradient(145deg, #043057, #022748);
+      color: rgba(255,255,255,.9);
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #f9a02c, #9ad2ff, #f9a02c);
+      opacity: .9;
+    }
+
+    .footer-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.35fr repeat(3,1fr);
+      gap: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,.22);
+    }
+
+    .footer h3 { color: #fff; margin-bottom: 10px; font-size: 1.02rem; }
+    .footer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+    .footer a:hover { color: #ffd18b; }
+
+    .copy {
+      position: relative;
+      z-index: 1;
+      padding-top: 12px;
+      font-size: .85rem;
+      color: rgba(255,255,255,.74);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .intro-grid,
+      .rights-grid,
+      .meta,
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .menu-toggle { display: inline-flex; }
+
+      .nav {
+        position: absolute;
+        left: 4%;
+        right: 4%;
+        top: calc(var(--header-h) + 6px);
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow-md);
+        padding: 14px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity var(--tr), transform var(--tr);
+      }
+
+      .nav.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .nav-list { flex-direction: column; align-items: stretch; }
+      .nav-list a { display: block; }
+      .nav .btn { width: 100%; }
+      .section { padding: 56px 0; }
+      .footer { padding-top: 62px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-wrap">
+      <a class="brand" href="index.html" aria-label="ARPYNET inicio"><img src="https://www.arpynet.com/wp-content/uploads/2018/04/logo-arpynet.png" alt="Logo ARPYNET" width="188" height="57"></a>
+      <button class="menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú"><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="Navegación principal">
+        <ul class="nav-list"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="beneficios.html">Beneficios</a></li><li><a href="sectores.html">Sectores</a></li><li><a href="respaldo.html">Respaldo</a></li><li><a href="blog.html">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+        <a class="btn btn-main" href="contacto.html">Solicitar cotización</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Privacidad y transparencia</span>
+        <h1>Ley de Protección de Datos Personales – Derechos ARCO</h1>
+        <p>En ARPYNET promovemos un tratamiento responsable de la información personal. En esta sección encontrará cómo ejercer sus derechos de manera simple, clara y segura.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <article class="card grid intro-grid">
+          <section>
+            <h2>¿Qué son los Derechos ARCO?</h2>
+            <p>Los Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición) permiten que toda persona tenga control sobre sus datos personales. Estos derechos se ejercen conforme a la Ley N.º 29733 – Ley de Protección de Datos Personales del Perú y su reglamento.</p>
+          </section>
+          <section>
+            <h2>¿Para qué sirve una solicitud ARCO?</h2>
+            <p>Una solicitud ARCO permite gestionar el uso de sus datos personales en ARPYNET, asegurando que su información sea tratada de forma transparente, pertinente y conforme a la finalidad autorizada.</p>
+          </section>
+        </article>
+
+        <article class="card">
+          <h2>Tipos de derechos ARCO</h2>
+          <div class="rights-grid">
+            <section class="right-card">
+              <h3 class="right-head"><span class="icon" aria-hidden="true">🔎</span>Derecho de Acceso</h3>
+              <p>Permite conocer si ARPYNET está utilizando sus datos personales, el origen de los mismos y las comunicaciones realizadas.</p>
+            </section>
+
+            <section class="right-card">
+              <h3 class="right-head"><span class="icon" aria-hidden="true">✏️</span>Derecho de Rectificación</h3>
+              <p>Permite actualizar, corregir o completar datos personales incorrectos o incompletos. En determinados casos, puede requerirse documentación de sustento.</p>
+            </section>
+
+            <section class="right-card">
+              <h3 class="right-head"><span class="icon" aria-hidden="true">🗑️</span>Derecho de Cancelación</h3>
+              <p>Permite solicitar la eliminación de datos personales cuando ya no sean necesarios para la finalidad recopilada o cuando se haya cumplido la relación contractual.</p>
+              <p style="margin-top:8px">Este derecho no aplica cuando exista obligación legal de conservar la información.</p>
+            </section>
+
+            <section class="right-card">
+              <h3 class="right-head"><span class="icon" aria-hidden="true">🛡️</span>Derecho de Oposición</h3>
+              <p>Permite solicitar que los datos personales no se utilicen para determinadas finalidades. La solicitud debe incluir la justificación correspondiente.</p>
+            </section>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Documentos requeridos</h2>
+          <ul class="list">
+            <li>Solicitud ARCO debidamente completada y firmada.</li>
+            <li>Copia simple del DNI del titular.</li>
+            <li>Carta poder (si aplica).</li>
+            <li>Documento de representación legal (si aplica).</li>
+            <li>Otros documentos según el tipo de solicitud.</li>
+          </ul>
+
+          <div class="meta" aria-label="Tiempo de atención">
+            <article class="meta-item">
+              <h3>Tiempo de atención</h3>
+              <p><strong>10 días hábiles</strong> para solicitudes generales.</p>
+            </article>
+            <article class="meta-item">
+              <h3>Solicitudes de acceso</h3>
+              <p><strong>20 días hábiles</strong> para solicitudes de acceso a datos personales.</p>
+            </article>
+          </div>
+
+          <div class="contact-box">
+            <h3>¿Cómo enviar tu solicitud?</h3>
+            <p>Puede presentar su solicitud ARCO adjuntando los documentos correspondientes por los siguientes canales:</p>
+            <p><strong>Dirección:</strong> Av. 28 de julio 363 Oficina 302, Lima</p>
+            <p><strong>Correo:</strong> <a href="mailto:info@arpynet.com">info@arpynet.com</a></p>
+
+            <div class="cta-wrap">
+              <a class="btn btn-main" href="formulario-arco.txt" download>Descargar Formulario ARCO</a>
+              <span class="cta-note">Complete y firme el formulario antes de enviarlo.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h3>ARPYNET</h3>
+          <p>ARPYNET es una empresa especializada en soluciones de tecnología para el sector público y privado, brindando servicios de infraestructura, nube, comunicaciones y soporte TI.</p>
+        </section>
+
+        <section>
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="sectores.html">Sectores</a></li>
+            <li><a href="respaldo.html">Respaldo</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="servicios.html">Hosting</a></li>
+            <li><a href="servicios.html">Servidores VPS</a></li>
+            <li><a href="servicios.html">Nube en AWS</a></li>
+            <li><a href="servicios.html">Licencias</a></li>
+            <li><a href="servicios.html">Outsourcing TI</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="mailto:info@arpynet.com">info@arpynet.com</a></li>
+            <li><a href="https://wa.me/51980583087" target="_blank" rel="noopener">980583087</a></li>
+            <li>Av. 28 de julio 363 Oficina 302</li>
+          </ul>
+          <div style="display:flex;justify-content:flex-end;margin-top:10px;">
+            <a href="libro-reclamaciones.html" aria-label="Libro de Reclamaciones" style="display:inline-flex;">
+              <img src="https://www.tecnoweb.net/wp-content/uploads/2021/12/L_reclamaciones_V.png.webp" alt="Libro de Reclamaciones" width="170" height="84" style="width:170px;height:auto;object-fit:contain;">
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="copy">
+        <span>© ARPYNET – Todos los derechos reservados</span>
+        <span>arpynet.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('.header');
+    const menu = document.getElementById('menuBtn');
+    const nav = document.getElementById('siteNav');
+
+    if (menu && nav) {
+      menu.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !menu.contains(e.target) && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menu.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menu.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menu.focus();
+        }
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      if (header) header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  </script>
+</body>
+</html>
